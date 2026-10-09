@@ -1,0 +1,23 @@
+{
+  "name": "proto-termot-a3",
+  "version": "1.0.0",
+  "description": "Um prototipo para auxiliar no tratamento utilizando termoterapia.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darknet2099/Proto-TermoT-A3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Darknet2099/Proto-TermoT-A3/issues"
+  },
+  "homepage": "https://github.com/Darknet2099/Proto-TermoT-A3#readme",
+  "dependencies": {
+    "express": "^5.3.0",
+    "path": "^0.12.7"
+  }
+}
