@@ -1,1 +1,84 @@
-Yo hey
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Consulte recursos de termoterapia por condição clínica e objetivo terapêutico."/>
+        <title>Termoterapia — Buscar</title>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+
+    <body data-page="buscar">
+
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="index.html" aria-label="Termoterapia, página inicial"
+                    ><span class="brand-icon" aria-hidden="true">♨</span
+                    ><span><strong>Termoterapia</strong><small>Consulta clínica</small></span>
+                </a>
+                <nav class="main-nav" aria-label="Navegação principal">
+                    <a href="index.html" data-nav="buscar">Buscar</a>
+                    <a href="historico.html" data-nav="historico">Histórico</a>
+                    <a href="configuracoes.html" data-nav="configuracoes">Configurações</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+
+            <section class="hero">
+                <p class="eyebrow">FERRAMENTA DE CONSULTA</p>
+                <h1>Evidência em termoterapia, na hora da decisão.</h1>
+                <p>Consulte informações sobre calor e frio por condição clínica e objetivo terapêutico.</p>
+                <div class="stats">
+                    <div><strong>8</strong><span>recursos</span></div>
+                    <div><strong>10</strong><span>condições clínicas</span></div>
+                    <div><strong>3</strong><span>passos até a ficha</span></div>
+                </div>
+            </section>
+
+            <div class="search-layout">
+                <aside class="panel filters" aria-label="Filtros de busca">
+                    <div class="step"><span>1</span><label for="condition-select">Condição clínica</label></div>
+                    <select id="condition-select">
+                        <option value="">Selecione a condição…</option>
+
+                    </select>
+
+                    <p id="condition-region" class="muted region-hint">Escolha uma condição para ver a região.</p>
+
+                    <div class="step step-disabled" id="objective-step">
+                        <span>2</span><label>Objetivo terapêutico</label>
+                    </div>
+
+                    <div id="objective-options" class="chips">
+                        <span class="muted">Escolha uma condição primeiro.</span>
+                    </div>
+
+                    <button class="button primary full" id="filter-button" disabled>
+                        Filtrar recursos disponíveis
+                    </button>
+
+                    <p class="small muted">
+                        Use os resultados como apoio à consulta, não como substituto da avaliação clínica.
+                    </p>
+                </aside>
+
+                <section id="results" aria-live="polite" class="results-area">
+                    <div class="empty-state">
+                        <h2>Os resultados aparecem aqui</h2>
+                        <p>
+                            Escolha uma condição clínica e um objetivo terapêutico e clique em “Filtrar recursos
+                            disponíveis”.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+        </main>
+
+        <footer class="site-footer">Protótipo A3 · Termoterapia · 8 recursos · 10 condições clínicas</footer>
+
+        <script type="module" src="./javascript/index.js"></script>
+    </body>
+</html>

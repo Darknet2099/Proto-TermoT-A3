@@ -1,0 +1,413 @@
+{
+  "resources": [
+    {
+      "name": "Crioterapia superficial",
+      "category": "Frio superficial",
+      "description": "Frio terapêutico (gelo, cold pack/gel, compressa fria) para modular dor, edema e metabolismo local.",
+      "mechanisms": [
+        "Reduz a circulação local (vasoconstrição)",
+        "Diminui a condução nervosa (analgesia)",
+        "Diminui a atividade metabólica (controle de edema)"
+      ],
+      "parameters": "Temperatura: ~0 a 15 °C · Duração: 15–20 min · Frequência: diária/intermitente",
+      "precautions": "Conferir sensibilidade térmica, circulação e integridade da pele. Evitar contato direto e prolongado com a pele.",
+      "contraindications": "Doença de Raynaud, crioglobulinemia.",
+      "references": "Miranda JP et al. BJSM, 2026 (revisão/meta-análise de crioterapia em distúrbios musculoesqueléticos)."
+    },
+    {
+      "name": "Calor superficial",
+      "category": "Calor superficial",
+      "description": "Compressa quente, bolsa térmica ou manta/almofada térmica para aliviar sintomas e preparar tecidos para o movimento.",
+      "mechanisms": [
+        "Aumenta a circulação local",
+        "Favorece o relaxamento muscular",
+        "Melhora a extensibilidade dos tecidos"
+      ],
+      "parameters": "Temperatura: ~40 a 45 °C · Duração: 15–20 min · Frequência: diária/intermitente (intensidade e tempo individualizados)",
+      "precautions": "Conferir sensibilidade e risco térmico.",
+      "contraindications": "A preencher pela revisão.",
+      "references": "Revisões de termoterapia/calor — a preencher."
+    },
+    {
+      "name": "Criocompressão",
+      "category": "Frio + compressão",
+      "description": "Frio associado à compressão, relevante em cenários pós-operatórios e musculoesqueléticos.",
+      "mechanisms": [
+        "Reduz a circulação local",
+        "Compressão auxilia o controle de edema"
+      ],
+      "parameters": "Temperatura: ~10 a 15 °C · Duração: 15–20 min · Frequência: diária/intermitente",
+      "precautions": "Conferir circulação distal, sensibilidade e integridade da pele.",
+      "contraindications": "A preencher pela revisão.",
+      "references": "Revisões de crioterapia pós-artroplastia — a preencher."
+    },
+    {
+      "name": "Imersão em água fria",
+      "category": "Frio por imersão",
+      "description": "Cold-water immersion/banho frio, usado na recuperação pós-exercício.",
+      "mechanisms": [
+        "Vasoconstrição e redução do metabolismo",
+        "Possível redução da dor muscular tardia"
+      ],
+      "parameters": "Temperatura da água: ~10 a 15 °C · Duração: 10–15 min · Frequência: após o esforço",
+      "precautions": "Atenção a respostas cardiovasculares e tolerância individual ao frio.",
+      "contraindications": "A preencher pela revisão.",
+      "references": "A preencher."
+    },
+    {
+      "name": "Parafina",
+      "category": "Calor superficial",
+      "description": "Banho de parafina; exemplo de calor superficial para mão e articulações periféricas.",
+      "mechanisms": [
+        "Aquecimento superficial uniforme",
+        "Melhora da extensibilidade e do conforto"
+      ],
+      "parameters": "Temperatura: ~52 a 54 °C · Duração: 15–20 min · Frequência: diária/intermitente",
+      "precautions": "Conferir integridade da pele, feridas abertas e sensibilidade.",
+      "contraindications": "A preencher pela revisão.",
+      "references": "A preencher."
+    },
+    {
+      "name": "Ultrassom terapêutico",
+      "category": "Ultrassom (térmico / não térmico)",
+      "description": "Ultrassom contínuo e pulsado. Separar efeito térmico de efeito predominantemente não térmico.",
+      "mechanisms": [
+        "Modo contínuo: efeito térmico",
+        "Modo pulsado: efeito predominantemente não térmico"
+      ],
+      "parameters": "Modo: contínuo ou pulsado · Frequência: 1 ou 3 MHz · Intensidade: ~0,5 a 2,0 W/cm² · Duração: conforme a área tratada",
+      "precautions": "Revisar precauções do equipamento e da região tratada.",
+      "contraindications": "A preencher pela revisão.",
+      "references": "Guan H et al., 2024 (ultrassom para dor musculoesquelética)."
+    },
+    {
+      "name": "Diatermia por ondas curtas",
+      "category": "Aquecimento profundo",
+      "description": "Ondas curtas contínuas ou pulsadas para aquecimento profundo. Evidência específica por condição.",
+      "mechanisms": [
+        "Aquecimento de tecidos profundos"
+      ],
+      "parameters": "Modo: contínuo ou pulsado · Dose térmica ou atérmica · Duração: ~15–20 min",
+      "precautions": "Revisar precauções (implantes metálicos, sensibilidade).",
+      "contraindications": "A preencher pela revisão.",
+      "references": "Pollet J et al. J Clin Med, 2023. DOI: 10.3390/jcm12123956."
+    },
+    {
+      "name": "Radiofrequência / TECAR",
+      "category": "Aquecimento profundo",
+      "description": "Modalidades capacitivas/resistivas de radiofrequência. Sem pressupor superioridade sobre outras modalidades.",
+      "mechanisms": [
+        "Aquecimento tecidual por radiofrequência"
+      ],
+      "parameters": "Temperatura tecidual-alvo: ~40 a 45 °C · Modo: capacitivo ou resistivo · Duração: ~10–20 min",
+      "precautions": "Revisar precauções do equipamento e implantes.",
+      "contraindications": "A preencher pela revisão.",
+      "references": "A preencher."
+    }
+  ],
+  "conditions": [
+    {
+      "name": "Osteoartrite de joelho",
+      "region": "Joelho",
+      "objectives": [
+        "Analgesia",
+        "Redução de rigidez",
+        "Preparação para movimento"
+      ]
+    },
+    {
+      "name": "Lombalgia inespecífica",
+      "region": "Coluna lombar",
+      "objectives": [
+        "Analgesia",
+        "Conforto/relaxamento"
+      ]
+    },
+    {
+      "name": "Entorse de tornozelo",
+      "region": "Tornozelo",
+      "objectives": [
+        "Analgesia",
+        "Controle de edema"
+      ]
+    },
+    {
+      "name": "Lesão muscular/DOMS",
+      "region": "Músculo",
+      "objectives": [
+        "Analgesia",
+        "Recuperação pós-exercício"
+      ]
+    },
+    {
+      "name": "Pós-operatório de artroplastia de joelho",
+      "region": "Joelho",
+      "objectives": [
+        "Analgesia",
+        "Controle de edema",
+        "Melhora de amplitude"
+      ]
+    },
+    {
+      "name": "Dor cervical inespecífica",
+      "region": "Coluna cervical",
+      "objectives": [
+        "Analgesia",
+        "Redução de rigidez"
+      ]
+    },
+    {
+      "name": "Osteoartrite de mão",
+      "region": "Mão",
+      "objectives": [
+        "Analgesia",
+        "Redução de rigidez"
+      ]
+    },
+    {
+      "name": "Capsulite adesiva de ombro",
+      "region": "Ombro",
+      "objectives": [
+        "Analgesia",
+        "Melhora de amplitude"
+      ]
+    },
+    {
+      "name": "Tendinopatia do manguito rotador",
+      "region": "Ombro",
+      "objectives": [
+        "Analgesia",
+        "Melhora de amplitude"
+      ]
+    },
+    {
+      "name": "Pós-operatório musculoesquelético geral",
+      "region": "Variável",
+      "objectives": [
+        "Analgesia",
+        "Controle de edema"
+      ]
+    }
+  ],
+
+  "evidenceLabels": {
+    "A": "A (Alto)",
+    "B": "B (Médio)",
+    "C": "C (Baixo)",
+    "I": "Insuficiente"
+  },
+  
+  "evidence": [
+    [
+      0,
+      0,
+      "Analgesia",
+      "B",
+      "Redução de dor em curto prazo."
+    ],
+    [
+      0,
+      1,
+      "Analgesia",
+      "B",
+      "Alívio sintomático em contextos selecionados."
+    ],
+    [
+      0,
+      1,
+      "Redução de rigidez",
+      "B",
+      "Alívio de rigidez como adjuvante."
+    ],
+    [
+      0,
+      1,
+      "Preparação para movimento",
+      "C",
+      "Preparar tecidos para exercício; dados limitados."
+    ],
+    [
+      0,
+      5,
+      "Analgesia",
+      "C",
+      "Mostrar apenas o que os estudos da condição sustentam."
+    ],
+    [
+      0,
+      6,
+      "Analgesia",
+      "I",
+      "Resultados heterogêneos; evidência limitada."
+    ],
+    [
+      1,
+      1,
+      "Analgesia",
+      "B",
+      "Adjuvante; não substitui exercício e educação."
+    ],
+    [
+      1,
+      1,
+      "Conforto/relaxamento",
+      "C",
+      "Conforto e relaxamento muscular em curto prazo."
+    ],
+    [
+      1,
+      6,
+      "Analgesia",
+      "I",
+      "Evidência insuficiente."
+    ],
+    [
+      2,
+      0,
+      "Analgesia",
+      "C",
+      "Limites da evidência na fase inicial."
+    ],
+    [
+      2,
+      0,
+      "Controle de edema",
+      "C",
+      "Efeito pequeno ou incerto."
+    ],
+    [
+      2,
+      2,
+      "Controle de edema",
+      "C",
+      "Frio + compressão; certeza baixa."
+    ],
+    [
+      3,
+      3,
+      "Recuperação pós-exercício",
+      "B",
+      "Alívio de dor muscular após esforço."
+    ],
+    [
+      3,
+      0,
+      "Analgesia",
+      "C",
+      "Efeito pequeno em dor."
+    ],
+    [
+      4,
+      0,
+      "Analgesia",
+      "C",
+      "Literatura específica pós-artroplastia."
+    ],
+    [
+      4,
+      2,
+      "Controle de edema",
+      "B",
+      "Criocompressão em cenário pós-operatório."
+    ],
+    [
+      4,
+      2,
+      "Analgesia",
+      "B",
+      "Alívio de dor em curto prazo."
+    ],
+    [
+      4,
+      0,
+      "Controle de edema",
+      "C",
+      "Efeito variável conforme protocolo."
+    ],
+    [
+      5,
+      1,
+      "Analgesia",
+      "C",
+      "Comparar com outras abordagens."
+    ],
+    [
+      5,
+      1,
+      "Redução de rigidez",
+      "C",
+      "Objetivo sintomático."
+    ],
+    [
+      6,
+      4,
+      "Analgesia",
+      "C",
+      "Parafina como exemplo para mão."
+    ],
+    [
+      6,
+      4,
+      "Redução de rigidez",
+      "C",
+      "Calor superficial para rigidez."
+    ],
+    [
+      6,
+      1,
+      "Redução de rigidez",
+      "C",
+      "Calor superficial como adjuvante."
+    ],
+    [
+      7,
+      1,
+      "Melhora de amplitude",
+      "C",
+      "Adjuvante à mobilidade/exercício."
+    ],
+    [
+      7,
+      1,
+      "Analgesia",
+      "C",
+      "Papel adjuvante."
+    ],
+    [
+      7,
+      5,
+      "Analgesia",
+      "I",
+      "Evidência insuficiente."
+    ],
+    [
+      8,
+      0,
+      "Analgesia",
+      "I",
+      "Disponibilidade do recurso não implica evidência forte."
+    ],
+    [
+      8,
+      5,
+      "Analgesia",
+      "I",
+      "Evidência insuficiente."
+    ],
+    [
+      9,
+      0,
+      "Controle de edema",
+      "C",
+      "Usar como consulta, não como autorização de tratamento."
+    ],
+    [
+      9,
+      2,
+      "Controle de edema",
+      "C",
+      "Quando aplicável."
+    ]
+  ]
+}
+
