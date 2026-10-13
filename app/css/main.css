@@ -21,11 +21,25 @@
     box-sizing:border-box
 }
 
-body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink)
+html {
+    height: 100%;
+    width: 100%;
 }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    color: var(--ink);
+}
+
+main.container {
+    flex: 1;
+    width: 100%;
+}
+
 a{
     color:var(--blue);
     text-decoration:none

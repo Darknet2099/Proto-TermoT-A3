@@ -1,4 +1,4 @@
-import { BridgeModule } from '../modules/bridge.js';
+import { ClientModule } from '../modules/client.js';
 
 (async () => {
 
@@ -9,9 +9,9 @@ import { BridgeModule } from '../modules/bridge.js';
     const filterButton = document.getElementById("filter-button");
     const resultsLabel = document.getElementById("results");
 
-    const bridge = new BridgeModule()
+    const client = new ClientModule()
 
-    var medicalData = await bridge.Get("undefined", "api/GetData")
+    var medicalData = await client.bridgeModule.Get("undefined", "api/GetData")
 
     var selectedCondition
     var objective

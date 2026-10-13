@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Consulte recursos de termoterapia por condição clínica e objetivo terapêutico."/>
+        <title>Termoterapia — Configurações</title>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body data-page="configuracoes">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="index.html" aria-label="Termoterapia, página inicial"><span class="brand-icon" aria-hidden="true">♨</span><span><strong>Termoterapia</strong><small>Consulta clínica</small></span></a>
+                <nav class="main-nav" aria-label="Navegação principal">
+                    <a href="index.html" data-nav="buscar">Buscar</a
+                    ><a href="historico.html" data-nav="historico">Histórico</a
+                    ><a href="configuracoes.html" data-nav="configuracoes">Configurações</a>
+                </nav>
+            </div>
+        </header>
+        <main class="container">
+            <div class="page-heading">
+                <p class="eyebrow">PREFERÊNCIAS</p>
+                <h1>Configurações</h1>
+                <p>Personalize a aparência da consulta.</p>
+            </div>
+            <div class="settings-grid">
+                <section class="panel">
+                    <h2>Aparência</h2>
+                    <div class="setting-row">
+                        <div>
+                            <strong>Tema</strong>
+                            <p class="muted">Escolha como o site aparece.</p>
+                        </div>
+                        <select id="theme-select" aria-label="Tema">
+                            <option value="auto">Automático</option>
+                            <option value="light">Claro</option>
+                            <option value="dark">Escuro</option>
+                        </select>
+                    </div>
+                    <div class="setting-row">
+                        <div>
+                            <strong>Tamanho do texto</strong>
+                            <p class="muted">Ajuste a leitura.</p>
+                        </div>
+                        <select id="font-size-select" aria-label="Tamanho do texto">
+                            <option value="normal">Normal</option>
+                            <option value="large">Grande</option>
+                        </select>
+                    </div>
+                </section>
+                <section class="panel">
+                    <h2>Sobre</h2>
+                    <div class="setting-row"><span>Módulo</span><span class="muted">Termoterapia</span></div>
+                    <div class="setting-row">
+                        <span>Conteúdo</span><span class="muted">8 recursos · 10 condições</span>
+                    </div>
+                    <div class="setting-row"><span>Versão</span><span class="muted">Protótipo A3</span></div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="site-footer">Protótipo A3 · Termoterapia · 8 recursos · 10 condições clínicas</footer>
+
+        <script type="module" src="./javascript/configuracoes.js"></script>
+    </body>
+</html>
