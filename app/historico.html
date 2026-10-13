@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Consulte recursos de termoterapia por condição clínica e objetivo terapêutico."/>
+        <title>Termoterapia — Histórico</title>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body data-page="historico">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="index.html" aria-label="Termoterapia, página inicial">
+                    <span class="brand-icon" aria-hidden="true">♨</span>
+                    <span><strong>Termoterapia</strong><small>Consulta clínica</small></span></a>
+                <nav class="main-nav" aria-label="Navegação principal">
+                    <a href="index.html" data-nav="buscar">Buscar</a>
+                    <a href="historico.html" data-nav="historico">Histórico</a>
+                    <a href="configuracoes.html" data-nav="configuracoes">Configurações</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+
+            <div class="page-heading">
+                <p class="eyebrow">SUA CONSULTA</p>
+                <h1>Histórico</h1>
+                <p>Recursos que você salvou ou consultou.</p>
+            </div>
+
+            <section class="history-section">
+                <div class="section-heading">
+                    <h2>Favoritos</h2>
+                    <button class="button text-button" id="clear-favorites">Limpar favoritos</button>
+                </div>
+                <div id="favorites-list" class="result-grid"></div>
+            </section>
+
+            <section class="history-section">
+                <div class="section-heading">
+                    <h2>Consultados recentemente</h2>
+                    <button class="button text-button" id="clear-history">Limpar histórico</button>
+                </div>
+                <div id="history-list" class="result-grid"></div>
+            </section>
+        </main>
+
+        <footer class="site-footer">Protótipo A3 · Termoterapia · 8 recursos · 10 condições clínicas</footer>
+
+        <script type="module" src="./javascript/historico.js"></script>
+    </body>
+</html>

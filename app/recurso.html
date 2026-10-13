@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Consulte recursos de termoterapia por condição clínica e objetivo terapêutico."/>
+        <title>Termoterapia — Recurso</title>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+
+    <body data-page="recurso">
+
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="index.html" aria-label="Termoterapia, página inicial"
+                    ><span class="brand-icon" aria-hidden="true">♨</span
+                    ><span><strong>Termoterapia</strong><small>Consulta clínica</small></span></a>
+                <nav class="main-nav" aria-label="Navegação principal">
+                    <a href="index.html" data-nav="buscar">Buscar</a
+                    ><a href="historico.html" data-nav="historico">Histórico</a
+                    ><a href="configuracoes.html" data-nav="configuracoes">Configurações</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Buscar</a><span>›</span><span id="detail-breadcrumb">Recurso</span>
+            </div>
+
+            <div class="detail-layout">
+                <article id="detail-content" class="detail-content">
+                    <div class="empty-state"><h2>Carregando recurso…</h2></div>
+                </article>
+                
+                <aside class="panel detail-sidebar">
+                    <p class="eyebrow">BUSCA ORIGINAL</p>
+                    <strong id="detail-condition"></strong>
+                    <p id="detail-objective" class="muted"></p>
+                    <button class="button secondary full" id="favorite-button">☆ Favoritar</button
+                    ><a class="button link-button full" href="index.html">← Voltar à busca</a>
+                    <nav class="toc" aria-label="Nesta ficha">
+                        <a href="#detail-description">Descrição</a><a href="#detail-mechanism">Mecanismo</a
+                        ><a href="#detail-evidence">Evidência</a><a href="#detail-parameters">Parâmetros</a
+                        ><a href="#detail-safety">Segurança</a><a href="#detail-references">Referências</a>
+                    </nav>
+                </aside>
+            </div>
+        </main>
+
+        <footer class="site-footer">Protótipo A3 · Termoterapia · 8 recursos · 10 condições clínicas</footer>
+
+        <script type="module" src="./javascript/recurso.js"></script>
+    </body>
+</html>
