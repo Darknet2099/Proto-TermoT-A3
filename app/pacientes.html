@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Termoterapia — Pacientes</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/main.css">
+        <script>
+    try {
+        const data = JSON.parse(localStorage.getItem("termoterapia-site-state-v2") || "{}");
+        if (data.theme === "dark") document.documentElement.dataset.theme = "dark";
+        else if (data.theme === "light") document.documentElement.dataset.theme = "light";
+    } catch(e) {}
+    </script>
+        <style>
+            .form-group { margin-bottom: 16px; }
+            .form-group label { display: block; font-size: 13px; font-weight: 750; margin-bottom: 6px; color: var(--navy); }
+            .form-group input { width: 100%; border: 1.5px solid var(--border); border-radius: 12px; background: var(--bg); color: var(--ink); padding: 12px; font: inherit; transition: border-color 0.2s;}
+            .form-group input:focus { outline: none; border-color: var(--blue); }
+        </style>
+    </head>
+
+    <body data-page="pacientes">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="index.html">
+                    <span class="brand-icon" aria-hidden="true">♨</span>
+                    <span>
+                        <strong>Termoterapia</strong>
+                        <small style="border-left: 1px solid rgba(255,255,255,0.3); padding-left: 8px; display: inline;">Fisioterapeuta</small>
+                    </span>
+                </a>
+                <nav class="main-nav" aria-label="Navegação principal">
+                    <a href="index.html" data-nav="buscar">Buscar</a>
+                    <a href="historico.html" data-nav="historico">Histórico</a>
+                    <a href="pacientes.html" data-nav="pacientes" aria-current="page">Pacientes</a>
+                    <a href="configuracoes.html" data-nav="configuracoes">Configurações</a>
+                </nav>
+                <div class="user-profile">
+                    <span class="user-avatar" aria-hidden="true">DP</span>
+                    <span class="user-name">Dr. Placeholder</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="page-heading">
+                <h1>Pacientes e prontuários</h1>
+                <div class="note" style="margin-top: 16px;">Demonstração: use dados fictícios. Os registros permanecem apenas neste navegador e podem ser perdidos ao limpar seus dados. O login do protótipo não restringe o acesso aos prontuários.</div>
+            </div>
+
+            <div class="search-layout">
+                <aside>
+                    <div class="panel filters" style="margin-bottom: 24px; position: static;">
+                        <h2 style="font-size: 18px; color: var(--navy); margin: 0 0 16px;">Cadastrar paciente</h2>
+                        <form id="form-paciente">
+                            <div class="form-group">
+                                <label for="patient-name">Nome completo</label>
+                                <input type="text" id="patient-name" required maxlength="150" autocomplete="off">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 24px;">
+                                <label for="patient-cpf">CPF</label>
+                                <input type="text" id="patient-cpf" required inputmode="numeric" maxlength="14" placeholder="000.000.000-00" autocomplete="off">
+                            </div>
+                            <p id="patient-message" class="small muted" style="margin-bottom: 12px;"></p>
+                            <button type="submit" class="button primary full" style="margin-top: 0;">Salvar cadastro</button>
+                        </form>
+                    </div>
+
+                    <div class="panel filters" style="position: static;">
+                        <h3 style="font-size: 16px; color: var(--navy); margin: 0 0 12px;">Pacientes cadastrados (<span id="count-pacientes">0</span>)</h3>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label for="record-patient">Consultar prontuário</label>
+                            <select id="record-patient">
+                                <option value="">Selecione…</option>
+                            </select>
+                        </div>
+                    </div>
+                </aside>
+
+                <section id="patient-details" class="results-area">
+                    <div class="empty-state">
+                        <p>Cadastre ou selecione um paciente para consultar seu prontuário.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="site-footer">Protótipo A3 · Termoterapia · 8 recursos · 10 condições clínicas</footer>
+        <script type="module" src="./javascript/pacientes.js"></script>
+    </body>
+</html>

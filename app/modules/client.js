@@ -2,15 +2,15 @@ import { BridgeModule } from './bridge.js';
 
 export class ClientModule {
     constructor() {
-        this.datastore = "termoterapia-site-state-v2"
-        this.defaultData = { favorites: [], history: [], theme: "dark", fontSize: "normal" };
+        this.datastore = "termoterapia-site-state-v2";
+        this.defaultData = { favorites: [], history: [], theme: "auto", fontSize: "normal" };
 
-        this.currentData = this.defaultData
+        this.currentData = this.defaultData;
 
-        this.bridgeModule = new BridgeModule()
+        this.bridgeModule = new BridgeModule();
 
-        this.GetLocalData()
-        this.ApplyUserSettings()
+        this.GetLocalData();
+        this.ApplyUserSettings();
     }
 
     GetLocalData() {
@@ -48,10 +48,6 @@ export class ClientModule {
     }
 
     ApplyUserSettings() {
-
-        const themeSelect = document.getElementById("theme-select");
-        const fontSelect = document.getElementById("font-size-select");
-
         if (this.currentData.theme === "auto") {
             document.documentElement.removeAttribute("data-theme");
         } else {
@@ -60,7 +56,31 @@ export class ClientModule {
 
         document.body.classList.toggle("large-text", this.currentData.fontSize === "large");
 
-        if (themeSelect) themeSelect.value = this.currentData.theme;
-        if (fontSelect) fontSelect.value = this.currentData.fontSize;
+        this.UpdateUserProfile();
+    }
+
+    UpdateUserProfile() {
+        try {
+            const storedUser = JSON.parse(localStorage.getItem("termoterapia-user"));
+            
+            if (storedUser && storedUser.name) {
+                const name = storedUser.name;
+                
+                const initials = name
+                    .split(/[\s._-]+/)
+                    .filter(Boolean)
+                    .slice(0, 2)
+                    .map(w => w[0].toUpperCase())
+                    .join("");
+
+                const userNameElements = document.querySelectorAll(".user-name");
+                const userAvatarElements = document.querySelectorAll(".user-avatar");
+
+                userNameElements.forEach(el => el.textContent = name);
+                userAvatarElements.forEach(el => el.textContent = initials);
+            }
+        } catch (e) {
+            console.error("Erro ao carregar perfil do usuário:", e);
+        }
     }
 }

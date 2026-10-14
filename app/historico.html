@@ -5,34 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Consulte recursos de termoterapia por condição clínica e objetivo terapêutico."/>
         <title>Termoterapia — Histórico</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.css">
+        <script>
+    try {
+        const data = JSON.parse(localStorage.getItem("termoterapia-site-state-v2") || "{}");
+        if (data.theme === "dark") document.documentElement.dataset.theme = "dark";
+        else if (data.theme === "light") document.documentElement.dataset.theme = "light";
+    } catch(e) {}
+    </script>
     </head>
     <body data-page="historico">
         <header class="topbar">
             <div class="topbar-inner">
                 <a class="brand" href="index.html" aria-label="Termoterapia, página inicial">
                     <span class="brand-icon" aria-hidden="true">♨</span>
-                    <span><strong>Termoterapia</strong><small>Consulta clínica</small></span></a>
+                    <span>
+                        <strong>Termoterapia</strong>
+                        <small style="border-left: 1px solid rgba(255,255,255,0.3); padding-left: 8px; display: inline;">Fisioterapeuta</small>
+                    </span>
+                </a>
                 <nav class="main-nav" aria-label="Navegação principal">
                     <a href="index.html" data-nav="buscar">Buscar</a>
-                    <a href="historico.html" data-nav="historico">Histórico</a>
+                    <a href="historico.html" data-nav="historico" aria-current="page">Histórico</a>
+                    <a href="pacientes.html" data-nav="pacientes">Pacientes</a>
                     <a href="configuracoes.html" data-nav="configuracoes">Configurações</a>
                 </nav>
+                <div class="user-profile">
+                    <span class="user-avatar" aria-hidden="true">DP</span>
+                    <span class="user-name">Dr. Placeholder</span>
+                </div>
             </div>
         </header>
 
         <main class="container">
-
             <div class="page-heading">
-                <p class="eyebrow">SUA CONSULTA</p>
                 <h1>Histórico</h1>
-                <p>Recursos que você salvou ou consultou.</p>
             </div>
 
             <section class="history-section">
                 <div class="section-heading">
                     <h2>Favoritos</h2>
-                    <button class="button text-button" id="clear-favorites">Limpar favoritos</button>
                 </div>
                 <div id="favorites-list" class="result-grid"></div>
             </section>
@@ -40,7 +54,6 @@
             <section class="history-section">
                 <div class="section-heading">
                     <h2>Consultados recentemente</h2>
-                    <button class="button text-button" id="clear-history">Limpar histórico</button>
                 </div>
                 <div id="history-list" class="result-grid"></div>
             </section>

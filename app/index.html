@@ -5,33 +5,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Consulte recursos de termoterapia por condição clínica e objetivo terapêutico."/>
         <title>Termoterapia — Buscar</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.css">
+        <script>
+    try {
+        const data = JSON.parse(localStorage.getItem("termoterapia-site-state-v2") || "{}");
+        if (data.theme === "dark") document.documentElement.dataset.theme = "dark";
+        else if (data.theme === "light") document.documentElement.dataset.theme = "light";
+    } catch(e) {}
+    </script>
     </head>
 
     <body data-page="buscar">
 
         <header class="topbar">
             <div class="topbar-inner">
-                <a class="brand" href="index.html" aria-label="Termoterapia, página inicial"
-                    ><span class="brand-icon" aria-hidden="true">♨</span
-                    ><span><strong>Termoterapia</strong><small>Consulta clínica</small></span>
+                <a class="brand" href="index.html" aria-label="Termoterapia, página inicial">
+                    <span class="brand-icon" aria-hidden="true">♨</span>
+                    <span>
+                        <strong>Termoterapia</strong>
+                        <small style="border-left: 1px solid rgba(255,255,255,0.3); padding-left: 8px; display: inline;">Fisioterapeuta</small>
+                    </span>
                 </a>
+                
                 <nav class="main-nav" aria-label="Navegação principal">
-                    <a href="index.html" data-nav="buscar">Buscar</a>
+                    <a href="index.html" data-nav="buscar" aria-current="page">Buscar</a>
                     <a href="historico.html" data-nav="historico">Histórico</a>
+                    <a href="pacientes.html" data-nav="pacientes">Pacientes</a>
                     <a href="configuracoes.html" data-nav="configuracoes">Configurações</a>
                 </nav>
+
+                <div class="user-profile">
+                    <span class="user-avatar" aria-hidden="true">DP</span>
+                    <span class="user-name">Dr. Placeholder</span>
+                </div>
             </div>
         </header>
 
         <main class="container">
 
             <section class="hero">
-                <p class="eyebrow">FERRAMENTA DE CONSULTA</p>
-                <h1>Evidência em termoterapia, na hora da decisão.</h1>
-                <p>Consulte informações sobre calor e frio por condição clínica e objetivo terapêutico.</p>
+                <h1>Buscar recursos de termoterapia</h1>
+                <p>Apoio à decisão clínica por condição e objetivo terapêutico, com ficha científica completa para cada recurso.</p>
                 <div class="stats">
-                    <div><strong>8</strong><span>recursos</span></div>
+                    <div><strong>8</strong><span>recursos de calor e frio</span></div>
                     <div><strong>10</strong><span>condições clínicas</span></div>
                     <div><strong>3</strong><span>passos até a ficha</span></div>
                 </div>
@@ -42,7 +60,6 @@
                     <div class="step"><span>1</span><label for="condition-select">Condição clínica</label></div>
                     <select id="condition-select">
                         <option value="">Selecione a condição…</option>
-
                     </select>
 
                     <p id="condition-region" class="muted region-hint">Escolha uma condição para ver a região.</p>
@@ -58,19 +75,12 @@
                     <button class="button primary full" id="filter-button" disabled>
                         Filtrar recursos disponíveis
                     </button>
-
-                    <p class="small muted">
-                        Use os resultados como apoio à consulta, não como substituto da avaliação clínica.
-                    </p>
                 </aside>
 
                 <section id="results" aria-live="polite" class="results-area">
                     <div class="empty-state">
-                        <h2>Os resultados aparecem aqui</h2>
-                        <p>
-                            Escolha uma condição clínica e um objetivo terapêutico e clique em “Filtrar recursos
-                            disponíveis”.
-                        </p>
+                        <h2 style="font-family: 'Source Serif 4', serif;">Os resultados aparecem aqui</h2>
+                        <p>Escolha a condição clínica e o objetivo terapêutico no painel e clique em “Filtrar recursos disponíveis”.</p>
                     </div>
                 </section>
             </div>

@@ -5,33 +5,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Consulte recursos de termoterapia por condição clínica e objetivo terapêutico."/>
         <title>Termoterapia — Configurações</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.css">
+        <script>
+            try {
+                const data = JSON.parse(localStorage.getItem("termoterapia-site-state-v2") || "{}");
+                if (data.theme === "dark") document.documentElement.dataset.theme = "dark";
+                else if (data.theme === "light") document.documentElement.dataset.theme = "light";
+            } catch(e) {}
+        </script>
     </head>
+    
     <body data-page="configuracoes">
         <header class="topbar">
             <div class="topbar-inner">
-                <a class="brand" href="index.html" aria-label="Termoterapia, página inicial"><span class="brand-icon" aria-hidden="true">♨</span><span><strong>Termoterapia</strong><small>Consulta clínica</small></span></a>
+                <a class="brand" href="index.html" aria-label="Termoterapia, página inicial">
+                    <span class="brand-icon" aria-hidden="true">♨</span>
+                    <span>
+                        <strong>Termoterapia</strong>
+                        <small style="border-left: 1px solid rgba(255,255,255,0.3); padding-left: 8px; display: inline;">Fisioterapeuta</small>
+                    </span>
+                </a>
+                
                 <nav class="main-nav" aria-label="Navegação principal">
-                    <a href="index.html" data-nav="buscar">Buscar</a
-                    ><a href="historico.html" data-nav="historico">Histórico</a
-                    ><a href="configuracoes.html" data-nav="configuracoes">Configurações</a>
+                    <a href="index.html" data-nav="buscar">Buscar</a>
+                    <a href="historico.html" data-nav="historico">Histórico</a>
+                    <a href="pacientes.html" data-nav="pacientes">Pacientes</a>
+                    <a href="configuracoes.html" data-nav="configuracoes" aria-current="page">Configurações</a>
                 </nav>
+
+                <div class="user-profile">
+                    <span class="user-avatar" aria-hidden="true">DP</span>
+                    <span class="user-name">Dr. Placeholder</span>
+                </div>
             </div>
         </header>
+
         <main class="container">
             <div class="page-heading">
-                <p class="eyebrow">PREFERÊNCIAS</p>
                 <h1>Configurações</h1>
-                <p>Personalize a aparência da consulta.</p>
             </div>
+            
             <div class="settings-grid">
+                
                 <section class="panel">
                     <h2>Aparência</h2>
                     <div class="setting-row">
-                        <div>
-                            <strong>Tema</strong>
-                            <p class="muted">Escolha como o site aparece.</p>
-                        </div>
+                        <div><strong>Tema</strong></div>
                         <select id="theme-select" aria-label="Tema">
                             <option value="auto">Automático</option>
                             <option value="light">Claro</option>
@@ -39,24 +60,50 @@
                         </select>
                     </div>
                     <div class="setting-row">
-                        <div>
-                            <strong>Tamanho do texto</strong>
-                            <p class="muted">Ajuste a leitura.</p>
-                        </div>
+                        <div><strong>Tamanho do texto</strong></div>
                         <select id="font-size-select" aria-label="Tamanho do texto">
                             <option value="normal">Normal</option>
                             <option value="large">Grande</option>
                         </select>
                     </div>
                 </section>
+
+                <section class="panel">
+                    <h2>Conta</h2>
+                    <div class="setting-row" style="border-top: 0; padding-top: 0;">
+                        <strong id="user-name-display">Dr. Placeholder</strong>
+                        <button type="button" class="button secondary" id="btn-sair">Sair</button>
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <h2>Meus dados</h2>
+                    <div class="setting-row" style="border-top: 0; padding-top: 0;">
+                        <strong id="label-favoritos">Favoritos (0)</strong>
+                        <button type="button" class="button secondary" id="btn-limpar-fav">Limpar</button>
+                    </div>
+                    <div class="setting-row">
+                        <strong id="label-historico">Histórico (0)</strong>
+                        <button type="button" class="button secondary" id="btn-limpar-hist">Limpar</button>
+                    </div>
+                </section>
+
                 <section class="panel">
                     <h2>Sobre</h2>
-                    <div class="setting-row"><span>Módulo</span><span class="muted">Termoterapia</span></div>
-                    <div class="setting-row">
-                        <span>Conteúdo</span><span class="muted">8 recursos · 10 condições</span>
+                    <div class="setting-row" style="border-top: 0; padding-top: 0;">
+                        <span>Módulo</span>
+                        <span class="muted">Termoterapia</span>
                     </div>
-                    <div class="setting-row"><span>Versão</span><span class="muted">Protótipo A3</span></div>
+                    <div class="setting-row">
+                        <span>Conteúdo</span>
+                        <span class="muted">8 recursos · 10 condições</span>
+                    </div>
+                    <div class="setting-row">
+                        <span>Versão</span>
+                        <span class="muted">Protótipo A3 (site)</span>
+                    </div>
                 </section>
+
             </div>
         </main>
 
